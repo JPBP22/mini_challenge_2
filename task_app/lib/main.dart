@@ -17,7 +17,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: HomeManager(),
+    );
+  }
+}
+
+class HomeManager extends StatefulWidget {
+  @override
+  _HomeManagerState createState() => _HomeManagerState();
+}
+
+class _HomeManagerState extends State<HomeManager> {
+  int _selectedIndex = 0;
+  final List<Widget> _pages = [HomePage(), CompletedTasksPage()];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.done), label: 'Completed'),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+      ),
     );
   }
 }
@@ -177,7 +206,7 @@ class HomePage extends StatelessWidget {
     var taskProvider = Provider.of<TaskProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('ToDo App'),
+        title: Text('Task App'),
         actions: [
           IconButton(
             icon: Icon(Icons.done),
