@@ -1,3 +1,17 @@
+//ÖZNUR  Variable and function names are mostly descriptive and consistent with Dart's naming conventions.
+//ÖZNUR  The code is properly indented and formatted for clarity.
+//ÖZNUR  The code includes comments explaining the purpose of various sections and functions.
+//ÖZNUR  They add value by providing context and clarifying the code.
+//ÖZNUR  The code seems to handle basic edge cases, such as null values for selectedDate and selectedTime.
+//ÖZNUR  The code is modular, with different parts separated into functions and classes..
+//ÖZNUR  Each function serves a specific purpose
+//ÖZNUR  Some parts of the code could be refactored to reduce duplication. 
+//ÖZNUR  For example, the task creation dialog could be extracted into a separate function to reduce redundancy.
+//ÖZNUR  The code is relatively flexible and allows for easy addition and editing of tasks.
+
+
+
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'task_model.dart';
