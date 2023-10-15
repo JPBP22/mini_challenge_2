@@ -1,3 +1,13 @@
+//ÖZNUR  The code seems to correctly manage tasks, including adding, toggling completion, editing, and deleting tasks. 
+//ÖZNUR  The use of notifyListeners to update the UI after changes is a good practice.
+//ÖZNUR  The class is relatively well-structured and follows the single responsibility principle, focusing on managing tasks.
+//ÖZNUR  There is some code repetition when adding, toggling, editing, and deleting tasks.
+//ÖZNUR  The code lacks comments or documentation.
+//ÖZNUR  Adding comments to describe the purpose and usage of each method would make the code more maintainable and understandable.
+ 
+
+
+
 import 'package:flutter/foundation.dart';
 import 'task_model.dart';
 
